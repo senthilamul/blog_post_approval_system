@@ -1,0 +1,59 @@
+# Laravel
+*.log
+.env
+.env.backup
+.env.production
+.phpunit.result.cache
+Homestead.json
+Homestead.yaml
+auth.json
+
+# IDEs
+.phpactor.json
+/.fleet
+/.idea
+/.nova
+/.vscode
+/.zed
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Dependencies
+/node_modules
+/vendor
+
+
+# Laravel misc
+/public/build
+/public/hot
+/public/storage
+/storage/*.key
+/storage/pail
+/.phpunit.cache
+/bootstrap/cache/*
+!bootstrap/cache/.gitignore
+
+# Composer
+composer.phar
+
+# NPM
+npm-debug.log
+yarn-error.log
+
+# PHP
+*.php
+*.php~
+.phpintel/
+.phpunit/
+
+# Debug
+xdebug *.log
+
+# Database
+*.sqlite
+*.sqlite3
+
+# Forge
+.php-fpm.conf
