@@ -160,30 +160,6 @@ All API endpoints require Bearer token authentication.
 - **Frontend**: Bootstrap 5, jQuery, SweetAlert2
 - **Authentication**: Laravel Sanctum
 - **Database**: MySQL
-- **Architecture**: Clean Architecture with Service Layer
-
-## 📁 Project Structure
-
-```
-app/
-├── Enums/              # Role, PostStatus, PostAction
-├── Models/             # User, Post, PostLog
-├── Services/           # PostService (business logic)
-├── Http/
-│   ├── Controllers/    # AuthController, PostController
-│   ├── Requests/       # CreatePostRequest, RejectPostRequest
-│   └── Policies/       # PostPolicy (authorization)
-database/
-├── migrations/         # users, posts, post_logs tables
-└── seeders/            # Demo users seeder
-resources/views/
-├── layouts/            # Main app layout
-├── auth/               # Login, Register views
-└── dashboard.blade.php # Main dashboard
-routes/
-├── api.php             # API routes
-└── web.php             # Web routes
-```
 
 ## License
 

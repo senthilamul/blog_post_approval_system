@@ -25,6 +25,9 @@ Thumbs.db
 /vendor
 
 
+# Storage
+storage/
+
 # Laravel misc
 /public/build
 /public/hot
@@ -43,8 +46,6 @@ npm-debug.log
 yarn-error.log
 
 # PHP
-*.php
-*.php~
 .phpintel/
 .phpunit/
 
