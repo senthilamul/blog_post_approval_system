@@ -32,18 +32,34 @@ class PostService
     {
         $user = Auth::user();
         
-        $post = Post::create([
+        $postData = [
             'title' => $data['title'],
             'body' => $data['body'],
-            'status' => PostStatus::Pending,
             'author_id' => $user->id,
-        ]);
+        ];
+        
+        // Handle optional fields
+        if (isset($data['status'])) {
+            $postData['status'] = PostStatus::from($data['status']);
+        } else {
+            $postData['status'] = PostStatus::Pending;
+        }
+        
+        if (isset($data['approved_by'])) {
+            $postData['approved_by'] = $data['approved_by'];
+        }
+        
+        if (isset($data['rejected_reason'])) {
+            $postData['rejected_reason'] = $data['rejected_reason'];
+        }
+        
+        $post = Post::create($postData);
 
         PostLog::create([
             'post_id' => $post->id,
             'user_id' => $user->id,
             'action' => PostAction::Created,
-            'meta' => ['title' => $post->title],
+            'meta' => ['title' => $post->title, 'status' => $post->status->value],
             'created_at' => now(),
         ]);
 

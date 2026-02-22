@@ -16,6 +16,9 @@ class CreatePostRequest extends FormRequest
         return [
             'title' => 'required|string|max:255',
             'body' => 'required|string',
+            'status' => 'nullable|string|in:pending,approved,rejected',
+            'approved_by' => 'nullable|integer|exists:users,id',
+            'rejected_reason' => 'nullable|string|max:1000',
         ];
     }
 
@@ -25,6 +28,9 @@ class CreatePostRequest extends FormRequest
             'title.required' => 'Post title is required.',
             'title.max' => 'Post title cannot exceed 255 characters.',
             'body.required' => 'Post content is required.',
+            'status.in' => 'Status must be either pending, approved, or rejected.',
+            'approved_by.exists' => 'The specified approver user does not exist.',
+            'rejected_reason.max' => 'Rejection reason cannot exceed 1000 characters.',
         ];
     }
 }

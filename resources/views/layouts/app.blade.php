@@ -69,7 +69,7 @@
                                         <i class="fas fa-home"></i> Dashboard
                                     </a>
                                 </li>
-                                <li class="nav-item">
+                                <li class="nav-item" style="display:none;">
                                     <a class="nav-link" href="{{ route('posts.index') }}">
                                         <i class="fas fa-file-alt"></i> All Posts
                                     </a>
@@ -92,7 +92,7 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="menu-section" id="adminMenu" style="display:none;">
+                        <!-- <div class="menu-section" id="adminMenu" style="display:none;">
                             <p class="menu-section-title">Admin Menu</p>
                             <ul class="nav flex-column">
                                 <li class="nav-item">
@@ -106,7 +106,7 @@
                                     </a>
                                 </li>
                             </ul>
-                        </div>
+                        </div> -->
                     </div>
                 </nav>
 
