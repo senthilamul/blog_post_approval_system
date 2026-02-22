@@ -38,6 +38,7 @@ cp .env.example .env
 
 Update `.env` with database credentials:
 
+CREATE DATABASE post_approval_system;
 ```
 env
 DB_CONNECTION=mysql
